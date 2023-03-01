@@ -1,8 +1,8 @@
 class Mctl < Formula
   desc "Membrane CLI"
   homepage "https://www.membrane.io"
-  url "https://www.membrane.io/mctl-1.0.0-macos-arm.zip"
-  sha256 "fc06a1918606cf5930fc4dd46f7c9482075b3a02715b3100bd76f8aed5a225be"
+  url "https://www.membrane.io/mctl-1.0.1-macos-arm.zip"
+  sha256 "6ac84cba79847055a0e7fadf58f05982fb8fd5eaf2c0128c764613daf2e8ef66"
 
   def install
     bin.install "mctl" => "mctl"
