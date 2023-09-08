@@ -1,14 +1,19 @@
 class Mctl < Formula
   desc "Membrane CLI"
   homepage "https://www.membrane.io"
-  url "https://www.membrane.io/mctl-1.4.0-macos-arm.zip"
-  sha256 "3c62c808ffc7d007e9c2d9ed8b059c3e24298b552ae85a1f5e1c67ce4897b6b0"
+
+  on_macos do
+    if Hardware::CPU.intel?
+      url "https://github.com/membrane-io/mctl-releases/releases/download/1.6.0/mctl-1.6.0-x86-arm.zip"
+      sha256 "c99a79bb015f61222d282f762a5bf99fa6b3ef3fac072555ee66c3f51abdf54f"
+    elsif Hardware::CPU.arm?
+      url "https://github.com/membrane-io/mctl-releases/releases/download/1.6.0/mctl-1.6.0-macos-arm.zip"
+      sha256 "6d6338367d41a4127b1bc01f31c9b2a2041ecbc3dede2e4eecaeb34e7a69e0e0"
+    end
+  end
 
   def install
     bin.install "mctl" => "mctl"
-    # bash_completion.install "completion/mctl.bash"
-    # zsh_completion.install "completion/mctl.zsh" => "_kubetail"
-    # fish_completion.install "completion/mctl.fish"
   end
 
   test do
