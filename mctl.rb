@@ -4,11 +4,11 @@ class Mctl < Formula
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/membrane-io/mctl-releases/releases/download/1.6.0/mctl-1.6.0-macos-x86.zip"
-      sha256 "c99a79bb015f61222d282f762a5bf99fa6b3ef3fac072555ee66c3f51abdf54f"
+      url "https://github.com/membrane-io/mctl-releases/releases/download/1.9.1/mctl-1.9.1-macos-x86.zip"
+      sha256 "7a1f88ab6c759cc9f2da7d56f0e2653e6b9b9a16b31b4de09e2f1f29a77b1640"
     elsif Hardware::CPU.arm?
-      url "https://github.com/membrane-io/mctl-releases/releases/download/1.6.0/mctl-1.6.0-macos-arm.zip"
-      sha256 "6d6338367d41a4127b1bc01f31c9b2a2041ecbc3dede2e4eecaeb34e7a69e0e0"
+      url "https://github.com/membrane-io/mctl-releases/releases/download/1.9.1/mctl-1.9.1-macos-arm.zip"
+      sha256 "9a603853eb8ddd2a132844553698c40cca8932a44f33237710388b62de5055b4"
     end
   end
 
